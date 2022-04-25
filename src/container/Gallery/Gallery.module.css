@@ -1,0 +1,119 @@
+.gallery {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-black);
+  padding: 4rem 0 4rem 6rem;
+}
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  min-width: 500px;
+  padding-right: 2rem;
+}
+.content button {
+  margin-top: 1rem;
+}
+.images {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  max-width: 50%;
+  position: relative;
+}
+.images-container {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.images-container::-webkit-scrollbar {
+  display: none;
+}
+.images-card {
+  position: relative;
+  min-width: 301px;
+  height: 447px;
+  margin-right: 2rem;
+}
+.images-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.images-card:hover img {
+  opacity: 0.35;
+}
+.images-card:hover .image-icon {
+  opacity: 1;
+}
+.image-icon {
+  position: absolute;
+  color: #fff;
+  font-size: 2rem;
+  opacity: 0;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.images-arrow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  position: absolute;
+  bottom: 5%;
+}
+.arrow-icon {
+  color: var(--color-golden);
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: var(--color-black);
+  border-radius: 5px;
+}
+.arrow-icon:hover {
+  color: var(--color-white);
+}
+
+@media screen and (min-width: 2000px) {
+  .content {
+    min-width: 1000px;
+    padding-right: 4rem;
+  }
+  .images-card {
+    min-width: 400px;
+    height: 550px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .gallery {
+    flex-direction: column;
+  }
+  .images {
+    max-width: 100%;
+    margin: 5rem 0;
+  }
+}
+@media screen and (max-width: 850px) {
+  .gallery {
+    padding: 4rem 0 4rem 4rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .gallery {
+    padding: 4rem 0 4rem 2rem;
+  }
+  .content {
+    min-width: 100%;
+  }
+  .images-card {
+    min-width: 240px;
+    height: 320px;
+  }
+}

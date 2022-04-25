@@ -1,0 +1,65 @@
+.about {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+}
+.overlay img {
+  width: 391px;
+  height: 415px;
+  z-index: 0;
+}
+.content {
+  width: 100%;
+  z-index: 2;
+}
+.content .about {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: right;
+}
+.knife {
+  margin: 2rem 4rem;
+}
+.knife img {
+  height: 910px;
+}
+
+.content .history {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+.content .history p,
+.content .about p {
+  margin: 2rem 0;
+  color: var(--color-grey);
+}
+
+@media screen and (max-width: 2000px) {
+  .knife img {
+    height: 1110px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .content {
+    flex-direction: column;
+  }
+  .content .history p,
+  .content .about p {
+    margin: 4rem 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .overlay img {
+    width: 80%;
+    height: 320px;
+  }
+}
